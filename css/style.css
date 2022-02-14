@@ -15,7 +15,7 @@ body {
 .outer-container {
   width: 200px;
   height: 200px;
-  perspective: 600px; 
+  perspective: 600px;
 }
 /* inner container with 3d preservation */
 .inner-container {
@@ -65,4 +65,79 @@ body {
 .six-dots {
   transform: rotateX(-90deg) translateZ(100px);
   background-color: rgba(255, 0, 0, 0.349);
+}
+/* lets rotate that badboy to show the six */
+/* panel 1 5 3 6 need to be rotated 90deg further 2 4 need to rotate in place to make the rotation belivable*/
+.outer-container:hover .one-dot {
+  animation-name: rotate1;
+  animation-duration: 0.5s;
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotatex(0deg) translateZ(100px);
+  }
+  100% {
+    transform: rotatex(90deg) translateZ(100px);
+  }
+}
+.outer-container:hover .three-dots {
+  animation-name: rotate3;
+  animation-duration: 0.5s;
+}
+@keyframes rotate3 {
+  0% {
+    transform: rotatex(180deg) translateZ(100px);
+  }
+  100% {
+    transform: rotatex(270deg) translateZ(100px);
+  }
+}
+.outer-container:hover .five-dots {
+  animation-name: rotate5;
+  animation-duration: 0.5s;
+}
+@keyframes rotate5 {
+  0% {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  100% {
+    transform: rotatex(180deg) translateZ(100px);
+  }
+}
+.outer-container:hover .six-dots {
+  animation-name: rotate6;
+  animation-duration: 0.5s;
+}
+@keyframes rotate6 {
+  0% {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  100% {
+    transform: rotatex(0deg) translateZ(100px);
+  }
+}
+/* rotating 4 and 2 */
+.outer-container:hover .four-dots {
+  animation-name: rotate4;
+  animation-duration: .5s;
+}
+@keyframes rotate4 {
+  0% {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  100% {
+    transform: rotateY(-90deg) rotatez(-90deg) translateZ(100px) ;
+  }
+}
+.outer-container:hover .two-dots {
+  animation-name: rotate2;
+  animation-duration: .5s;
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  100% {
+    transform: rotateY(90deg) rotatez(90deg) translateZ(100px) ;
+  }
 }
