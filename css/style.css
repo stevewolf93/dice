@@ -1,0 +1,70 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* center the dice in the middle of page */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* outer container with perspective anchor */
+.outer-container {
+  width: 200px;
+  height: 200px;
+  perspective: 600px; 
+
+}
+/* inner container with 3d preservation */
+.inner-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+/* each side panel of the dice */
+.panel {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  font-size: 10rem;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+/* translate all panels half of the width/height */
+/* no rotation translateZ pushing it 100px to the viewer */
+.one-dot {
+  transform: rotateZ(0deg) translateZ(100px);
+  background-color: rgba(136, 136, 36, 0.253);
+}
+/* 90deg retoation to the right side tranlateZ pusing the panel 100px out to the right */
+.two-dots {
+  transform: rotateY(90deg) translateZ(100px);
+  background-color: rgba(184, 135, 11, 0.233);
+}
+/* inversion of one-dot */
+.three-dots {
+  transform: rotateY(180deg) translateZ(100px);
+  background-color: rgba(137, 43, 226, 0.301);
+}
+/* 90deg retoation to the left side tranlateZ pusing the panel 100px out to the left */
+.four-dots {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-color: rgba(165, 42, 42, 0.301);
+}
+/* rotateX to move it on top */
+.five-dots {
+  transform: rotateX(90deg) translateZ(100px);
+  background-color: rgba(69, 163, 163, 0.267);
+}
+/* -rotateX to move it to the bottom */
+.six-dots {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-color: rgba(255, 0, 0, 0.349);
+}
+
