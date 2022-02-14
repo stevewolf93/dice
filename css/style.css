@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,7 +16,6 @@ body {
   width: 200px;
   height: 200px;
   perspective: 600px; 
-
 }
 /* inner container with 3d preservation */
 .inner-container {
@@ -40,7 +39,7 @@ body {
 /* no rotation translateZ pushing it 100px to the viewer */
 .one-dot {
   transform: rotateZ(0deg) translateZ(100px);
-  background-color: rgba(136, 136, 36, 0.253);
+  background-color: rgba(148, 148, 148, 0.253);
 }
 /* 90deg retoation to the right side tranlateZ pusing the panel 100px out to the right */
 .two-dots {
@@ -67,4 +66,3 @@ body {
   transform: rotateX(-90deg) translateZ(100px);
   background-color: rgba(255, 0, 0, 0.349);
 }
-
